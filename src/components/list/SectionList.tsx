@@ -1,11 +1,6 @@
 import Card from "@components/cards/Card";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
-const responsive = {
-  0: { items: 2 },
-  568: { items: 3 },
-  1024: { items: 8 },
-};
 
 type PostDetialsProps = {
   title: string;
@@ -49,6 +44,12 @@ enum OriginalLanguage {
   Ja = "ja",
   Ko = "ko",
 }
+
+const responsive = {
+  0: { items: 2 },
+  568: { items: 3 },
+  1024: { items: 8 },
+};
 
 const SectionList = ({ title, data }: PostDetialsProps) => {
   return (

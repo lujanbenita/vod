@@ -4,6 +4,7 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   background-color: ${({ theme }) => theme.colors.headerBg};
+  height: 6rem;
 `;
 
 export const Container = styled.div`

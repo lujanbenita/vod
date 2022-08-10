@@ -7,18 +7,20 @@ import UseReactQuery, {
 } from "src/hooks/reactQuery/useReactQuery";
 
 import SectionList from "@components/list/SectionList";
+import SectionHeadList from "@components/list/SectionHeadList";
 
 const Home: FC = () => {
   const { data: dataTheatres } = UseReactQuery("fetchDataTheatres", fetchDataTheatres);
   const { data: trendingDay } = UseReactQuery("fetchDataTrendingDay", fetchDataTrendingDay);
-  console.log("trendingDay", trendingDay.results.slice(0, 10));
 
   return (
     <Wrapper>
       <GlobalStyle />
       <Header />
-      <Main />
+      <SectionHeadList data={trendingDay} />
+
       <SectionList title={"Cinema"} data={dataTheatres} />
+      <Main />
     </Wrapper>
   );
 };
