@@ -1,6 +1,5 @@
 import CardHead from "@components/cards/CardHead";
 import IconArrow from "@components/icons/IconArrow";
-import Image from "next/image";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import { SectionHeadListStyle } from "./list.styled";

@@ -37,6 +37,7 @@ export const SectionHeadListStyle = styled.section`
     display: flex;
     align-items: center;
     height: 100%;
+    cursor: pointer;
 
     &:hover path {
       stroke: #f04505 !important;
