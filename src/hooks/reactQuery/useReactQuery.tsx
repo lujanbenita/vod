@@ -57,6 +57,12 @@ export const fetchDataMovie = async (id: string) => {
   return data;
 };
 
+export const fetchDataMovieCredits = async (id: string) => {
+  const response = await fetch(`${URL}/movie/${id}/credits?api_key=${API}`);
+  const data = await response.json();
+  return data;
+};
+
 const UseReactQuery = (id: string, fetch: any) => {
   const { isLoading, isError, data, error } = useQuery([id], fetch, {
     staleTime: 60000 * 60, // 1 hora de caché
