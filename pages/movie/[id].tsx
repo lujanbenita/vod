@@ -10,6 +10,7 @@ import {
   ContainerInfoMovie,
 } from "src/pages/detailMovie/detailMovie.style";
 import SectionCast from "@components/list/SectionCast";
+import SectionCrew from "@components/list/SectionCrew";
 
 const MovieDetail = () => {
   const { query } = useRouter();
@@ -62,7 +63,8 @@ const MovieDetail = () => {
           <h2>Sipnosis</h2>
           <p>{dataMovie.overview}</p>
         </div>
-        <SectionCast dataMovieCredits={dataMovieCredits} />
+        <SectionCast dataMovieCredits={dataMovieCredits.cast} />
+        <SectionCrew dataMovieCredits={dataMovieCredits.crew} />
       </>
     )
   );

@@ -49,6 +49,7 @@ export const ContainerSection = styled.div`
 `;
 
 export const ItemCast = styled.div`
+  max-width: 138px;
   margin-right: 1rem;
   border: 1px solid rgb(227, 227, 227);
   box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
@@ -56,6 +57,11 @@ export const ItemCast = styled.div`
   & > span {
     width: 138px !important;
     height: 175px !important;
+  }
+
+  img {
+    background: url(/images/fallback-image.jpg);
+    background-position-x: 50%;
   }
 
   p {

@@ -7,12 +7,13 @@ import {
 import { URL_IMG_CAST } from "src/utils/constants";
 
 const SectionCast = ({ dataMovieCredits }) => {
+  // direccion, produccion, guión
   return (
     <ContainerSection>
       <h3>Reparto</h3>
       {dataMovieCredits !== undefined && (
         <ContainerCastItem>
-          {dataMovieCredits.cast.map((item) => (
+          {dataMovieCredits.map((item) => (
             <ItemCast>
               <Image src={URL_IMG_CAST + item.profile_path} width={138} height={175} />
               <p>
