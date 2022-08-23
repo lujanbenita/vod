@@ -53,6 +53,7 @@ export const ItemCast = styled.div`
   margin-right: 1rem;
   border: 1px solid rgb(227, 227, 227);
   box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+  cursor: pointer;
 
   & > span {
     width: 138px !important;

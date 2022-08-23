@@ -9,6 +9,7 @@ import UseReactQuery, {
 import SectionList from "@components/list/SectionList";
 import SectionHeadList from "@components/list/SectionHeadList";
 
+// /movie/upcoming
 const Home: FC = () => {
   const { data: dataTheatres } = UseReactQuery("fetchDataTheatres", fetchDataTheatres);
   const { data: trendingDay } = UseReactQuery("fetchDataTrendingDay", fetchDataTrendingDay);

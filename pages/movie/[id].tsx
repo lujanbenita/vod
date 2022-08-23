@@ -12,6 +12,9 @@ import {
 import SectionCast from "@components/list/SectionCast";
 import SectionCrew from "@components/list/SectionCrew";
 
+// TODO : GET /movie/{movie_id}/recommendations
+// /movie/{movie_id}/videos
+// /movie/{movie_id}/watch/providers
 const MovieDetail = () => {
   const { query } = useRouter();
   const movieId = query.id;
@@ -30,12 +33,8 @@ const MovieDetail = () => {
       setDataMovie(data);
     })();
   }, [dataMovie?.id]);
-  console.log("dataMovie", dataMovie);
 
   if (dataMovie === undefined) return "Loading";
-
-  console.log("dataMovieCredits", dataMovieCredits);
-  //console.log("dataMovie", dataMovie);
 
   return (
     dataMovie !== undefined && (
