@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
 
   html {
     font-size: 10px;
+    font-size: 62.5%; // 1rem = 10px
   }
   
   body {

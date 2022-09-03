@@ -1,7 +1,7 @@
 import Card from "@components/cards/Card";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
-import { PostDetailsProps } from "./list.types";
+import { PostDetailsProps, Result } from "./list.types";
 
 const responsive = {
   0: { items: 2 },

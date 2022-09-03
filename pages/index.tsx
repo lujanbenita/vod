@@ -18,7 +18,7 @@ const Home: FC = () => {
     <Wrapper>
       <GlobalStyle />
       <Header />
-      <SectionHeadList data={trendingDay} />
+      <SectionHeadList data={trendingDay?.results} />
 
       <SectionList title={"Cinema"} data={dataTheatres} />
       <Main />
