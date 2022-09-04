@@ -11,6 +11,7 @@ import {
 } from "src/pages/detailMovie/detailMovie.style";
 import SectionCast from "@components/list/SectionCast";
 import SectionCrew from "@components/list/SectionCrew";
+import LayoutContainerPadding from "@components/common/layouts/LayoutContainerPadding";
 
 // TODO : GET /movie/{movie_id}/recommendations
 // /movie/{movie_id}/videos
@@ -40,30 +41,34 @@ const MovieDetail = () => {
     dataMovie !== undefined && (
       <>
         <ContainerInfoMovie>
-          <h1>{dataMovie.title}</h1>
-          <h3>{dataMovie.tagline}</h3>
-          <ContainerImage>
-            <Image
-              src={URL_IMAGES + dataMovie.backdrop_path}
-              width={1920}
-              height={720}
-              layout="intrinsic"
-              quality={65}
-            />
-          </ContainerImage>
-          <ContainerInfo>
-            <p>Puntuación de usuario : {dataMovie.vote_average}</p>
-            <p>duración : {dataMovie.runtime}</p>
-            <p>Presupuesto : {dataMovie.budget}</p>
-            <p>Recaudación : {dataMovie.revenue}</p>
-          </ContainerInfo>
+          <LayoutContainerPadding>
+            <h1>{dataMovie.title}</h1>
+            <h3>{dataMovie.tagline}</h3>
+            <ContainerImage>
+              <Image
+                src={URL_IMAGES + dataMovie.backdrop_path}
+                width={1920}
+                height={720}
+                layout="intrinsic"
+                quality={65}
+              />
+            </ContainerImage>
+            <ContainerInfo>
+              <p>Puntuación de usuario : {dataMovie.vote_average}</p>
+              <p>duración : {dataMovie.runtime}</p>
+              <p>Presupuesto : {dataMovie.budget}</p>
+              <p>Recaudación : {dataMovie.revenue}</p>
+            </ContainerInfo>
+          </LayoutContainerPadding>
         </ContainerInfoMovie>
-        <div>
-          <h2>Sipnosis</h2>
-          <p>{dataMovie.overview}</p>
-        </div>
-        <SectionCast dataMovieCredits={dataMovieCredits.cast} />
-        <SectionCrew dataMovieCredits={dataMovieCredits.crew} />
+        <LayoutContainerPadding>
+          <div>
+            <h2>Sipnosis</h2>
+            <p>{dataMovie.overview}</p>
+          </div>
+          <SectionCast dataMovieCredits={dataMovieCredits.cast} />
+          <SectionCrew dataMovieCredits={dataMovieCredits.crew} />
+        </LayoutContainerPadding>
       </>
     )
   );

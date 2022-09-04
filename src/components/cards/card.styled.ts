@@ -11,6 +11,14 @@ export const InfoCardHeadContainer = styled.div`
   left: 8rem;
   width: 50%;
   color: white;
+
+  span {
+    font-size: 1.6rem;
+  }
+
+  p {
+    font-size: 2rem;
+  }
 `;
 
 export const TagsGenres = styled.span`

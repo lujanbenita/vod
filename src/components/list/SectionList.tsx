@@ -1,6 +1,7 @@
 import Card from "@components/cards/Card";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
+import { ContainerList } from "./list.styled";
 import { PostDetailsProps, Result } from "./list.types";
 
 const responsive = {
@@ -11,7 +12,7 @@ const responsive = {
 
 const SectionList = ({ title, data }: PostDetailsProps) => {
   return (
-    <section>
+    <ContainerList>
       <h4>{title}</h4>
       <AliceCarousel
         responsive={responsive}
@@ -22,7 +23,7 @@ const SectionList = ({ title, data }: PostDetailsProps) => {
           <Card data={item} key={item.id} />
         ))}
       />
-    </section>
+    </ContainerList>
   );
 };
 

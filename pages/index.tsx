@@ -1,6 +1,5 @@
 import { FC } from "react";
 import { Wrapper, Header, Main } from "@components";
-import GlobalStyle from "@styles/globalStyles";
 import UseReactQuery, {
   fetchDataTheatres,
   fetchDataTrendingDay,
@@ -16,7 +15,6 @@ const Home: FC = () => {
 
   return (
     <Wrapper>
-      <GlobalStyle />
       <Header />
       <SectionHeadList data={trendingDay?.results} />
 

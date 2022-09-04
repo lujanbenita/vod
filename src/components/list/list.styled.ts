@@ -68,3 +68,11 @@ export const SectionHeadListStyle = styled.section`
     }
   }
 `;
+
+export const ContainerList = styled.section`
+  h4 {
+    padding-left: 2rem;
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+`;
